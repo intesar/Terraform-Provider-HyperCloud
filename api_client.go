@@ -8,6 +8,7 @@ import (
 	//"io"
 	"io/ioutil"
 	"net/http"
+	"crypto/tls"
 	//"net/url"
 	//"reflect"
 	//"strconv"
@@ -28,7 +29,10 @@ func newAuth(url string, key string, secret string) (auth *Auth)  {
 }
 
 func (a Auth) getVM(id string) (*HCApiResponse, error) {
-	client := &http.Client{}
+	tr := &http.Transport{
+		TLSClientConfig: &tls.Config{InsecureSkipVerify: true},
+	}
+	client := &http.Client{Transport: tr}
 	req, err := http.NewRequest("GET", a.URL + "/api/dockerservers/" + id, nil)
 	req.SetBasicAuth(a.KEY, a.SECRET)
 	req.Header.Add("Accept", "application/json")
@@ -63,7 +67,10 @@ func (a Auth) getResult(body []byte) (*HCApiResponse, error) {
 }
 
 func (a Auth) getBlueprint(blueprintId string) (*HCApiResponse, error) {
-	client := &http.Client{}
+	tr := &http.Transport{
+		TLSClientConfig: &tls.Config{InsecureSkipVerify: true},
+	}
+	client := &http.Client{Transport: tr}
 
 	req, err := http.NewRequest("GET", a.URL + "/api/blueprints/" + blueprintId, nil)
 	req.SetBasicAuth(a.KEY, a.SECRET)
@@ -90,7 +97,10 @@ func (a Auth) getBlueprint(blueprintId string) (*HCApiResponse, error) {
 }
 
 func (a Auth) newBlueprintClient() *http.Client {
-	client := &http.Client{}
+	tr := &http.Transport{
+		TLSClientConfig: &tls.Config{InsecureSkipVerify: true},
+	}
+	client := &http.Client{Transport: tr}
 
 	req, _ := http.NewRequest("GET", a.URL + "/api/blueprints/", nil)
 	req.SetBasicAuth(a.KEY, a.SECRET)
@@ -103,7 +113,7 @@ func (a Auth) newBlueprintClient() *http.Client {
 func (a Auth) waitForTask(id string) (*HCApiResponse) {
 	s, _ := a.getVM(id)
 	fmt.Printf("\nResource is under processing with status [%s]", s.Results.DockerServerStatus)
-	if ( strings.HasSuffix(s.Results.DockerServerStatus, "ING")) {
+	if ( strings.HasSuffix(s.Results.DockerServerStatus, "ING") || strings.HasSuffix(s.Results.DockerServerStatus, "ing")) {
 		time.Sleep(3000 * time.Millisecond)
 		return a.waitForTask(id)
 	}
@@ -138,7 +148,10 @@ func (a Auth) create(blueprintId string) *HCApiResponse {
 	jsonValue, _ := json.Marshal(vm)
 
 
-	client := &http.Client{}
+	tr := &http.Transport{
+		TLSClientConfig: &tls.Config{InsecureSkipVerify: true},
+	}
+	client := &http.Client{Transport: tr}
 	req, err := http.NewRequest("POST", a.URL + "/api/dockerservers/sdi", bytes.NewBuffer(jsonValue))
 
 	if err != nil {
@@ -175,7 +188,10 @@ func (a Auth) create(blueprintId string) *HCApiResponse {
 func (a Auth) delete(id string) (*HCApiResponse, error) {
 	log.Printf("[HC-INFO] Deleting Compute ID %s...", id)
 
-	client := &http.Client{}
+	tr := &http.Transport{
+		TLSClientConfig: &tls.Config{InsecureSkipVerify: true},
+	}
+	client := &http.Client{Transport: tr}
 	req, err := http.NewRequest("DELETE", a.URL + "/api/dockerservers/ " + id + "?force=true", nil)
 	if err != nil {
 		log.Printf("[HC-ERROR] %s", err)
