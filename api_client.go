@@ -105,8 +105,9 @@ func (a Auth) waitForTask(id string) (*HCApiResponse) {
 	fmt.Printf("\nResource is under processing with status [%s]", s.Results.DockerServerStatus)
 	if ( strings.HasSuffix(s.Results.DockerServerStatus, "ING")) {
 		time.Sleep(3000 * time.Millisecond)
-		a.waitForTask(id)
+		return a.waitForTask(id)
 	}
+
 	return s
 
 }
@@ -138,7 +139,7 @@ func (a Auth) create(blueprintId string) *HCApiResponse {
 
 
 	client := &http.Client{}
-	req, err := http.NewRequest("POST", a.URL + "dockerservers/sdi", bytes.NewBuffer(jsonValue))
+	req, err := http.NewRequest("POST", a.URL + "/api/dockerservers/sdi", bytes.NewBuffer(jsonValue))
 
 	if err != nil {
 		log.Printf("[HC-ERROR] %s", err)
