@@ -1,0 +1,935 @@
+2017/05/16 18:39:54 [INFO] Terraform version: 0.9.5  a59ee0b30e1350d18e44a3a2a405124302751f93
+2017/05/16 18:39:54 [INFO] Go runtime version: go1.8
+2017/05/16 18:39:54 [INFO] CLI args: []string{"/Users/imohammed/Downloads/Hashicorp/terraform", "apply"}
+2017/05/16 18:39:54 [DEBUG] Detected home directory from env var: /Users/imohammed
+2017/05/16 18:39:54 [DEBUG] Discovered plugin: hypercloud = /Users/imohammed/GoglandProjects/Terraform/terraform-provider-hypercloud
+2017/05/16 18:39:54 [DEBUG] Detected home directory from env var: /Users/imohammed
+2017/05/16 18:39:54 [DEBUG] Attempting to open CLI config file: /Users/imohammed/.terraformrc
+2017/05/16 18:39:54 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2017/05/16 18:39:54 [INFO] CLI command args: []string{"apply"}
+2017/05/16 18:39:54 [DEBUG] Detected home directory from env var: /Users/imohammed
+2017/05/16 18:39:54 [DEBUG] command: loading backend config file: /Users/imohammed/GoglandProjects/Terraform
+2017/05/16 18:39:54 [DEBUG] command: no data state file found for backend config
+2017/05/16 18:39:54 [DEBUG] New state was assigned lineage "1ff67453-3d46-45fd-a059-a93f6a76856d"
+2017/05/16 18:39:54 [INFO] command: backend initialized: <nil>
+2017/05/16 18:39:54 [INFO] command: backend <nil> is not enhanced, wrapping in local
+2017/05/16 18:39:54 [INFO] backend/local: starting Apply operation
+2017/05/16 18:39:54 [TRACE] Preserving existing state lineage "a03f75c1-4cf4-4885-aafb-ba9a1a8cb553"
+2017/05/16 18:39:54 [TRACE] Preserving existing state lineage "a03f75c1-4cf4-4885-aafb-ba9a1a8cb553"
+2017/05/16 18:39:54 [INFO] terraform: building graph: GraphTypeInput
+2017/05/16 18:39:54 [TRACE] ConfigTransformer: Starting for path: []
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.ConfigTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeAbstractResource
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.OutputTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeAbstractResource
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.OrphanResourceTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeAbstractResource
+2017/05/16 18:39:54 [TRACE] AttachResourceConfigTransformer: Beginning...
+2017/05/16 18:39:54 [TRACE] AttachResourceConfigTransformer: Attach resource config request: hypercloud_compute.compute-001
+2017/05/16 18:39:54 [TRACE] Attaching resource config: &config.Resource{Mode:0, Name:"compute-001", Type:"hypercloud_compute", RawCount:(*config.RawConfig)(0xc4202bd200), RawConfig:(*config.RawConfig)(0xc4202bd080), Provisioners:[]*config.Provisioner(nil), Provider:"", DependsOn:[]string(nil), Lifecycle:config.ResourceLifecycle{CreateBeforeDestroy:false, PreventDestroy:false, IgnoreChanges:[]string(nil)}}
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.AttachResourceConfigTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeAbstractResource
+2017/05/16 18:39:54 [DEBUG] Resource state not found for "hypercloud_compute.compute-001": hypercloud_compute.compute-001
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.AttachStateTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeAbstractResource
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.RootVariableTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeAbstractResource
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.MissingProviderTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeAbstractResource
+provider.hypercloud - *terraform.NodeApplyableProvider
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.ProviderTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeAbstractResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud - *terraform.NodeApplyableProvider
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.DisableProviderTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeAbstractResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud - *terraform.NodeApplyableProvider
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.ParentProviderTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeAbstractResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud - *terraform.NodeApplyableProvider
+2017/05/16 18:39:54 [TRACE] Attach provider request: []string{} hypercloud
+2017/05/16 18:39:54 [TRACE] Attaching provider config: *config.ProviderConfig{Name:"hypercloud", Alias:"", RawConfig:(*config.RawConfig)(0xc4202bcd20)}
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.AttachProviderConfigTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeAbstractResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud - *terraform.NodeApplyableProvider
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.ModuleVariableTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeAbstractResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud - *terraform.NodeApplyableProvider
+2017/05/16 18:39:54 [DEBUG] ReferenceTransformer: "hypercloud_compute.compute-001" references: []
+2017/05/16 18:39:54 [DEBUG] ReferenceTransformer: "provider.hypercloud" references: []
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.ReferenceTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeAbstractResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud - *terraform.NodeApplyableProvider
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.CountBoundaryTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeAbstractResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  hypercloud_compute.compute-001 - *terraform.NodeAbstractResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud - *terraform.NodeApplyableProvider
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeAbstractResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  hypercloud_compute.compute-001 - *terraform.NodeAbstractResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud - *terraform.NodeApplyableProvider
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.CloseProviderTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeAbstractResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  hypercloud_compute.compute-001 - *terraform.NodeAbstractResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud (close) - *terraform.graphNodeCloseProvider
+  hypercloud_compute.compute-001 - *terraform.NodeAbstractResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.CloseProvisionerTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeAbstractResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  hypercloud_compute.compute-001 - *terraform.NodeAbstractResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud (close) - *terraform.graphNodeCloseProvider
+  hypercloud_compute.compute-001 - *terraform.NodeAbstractResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.RootTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeAbstractResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  hypercloud_compute.compute-001 - *terraform.NodeAbstractResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud (close) - *terraform.graphNodeCloseProvider
+  hypercloud_compute.compute-001 - *terraform.NodeAbstractResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+root - terraform.graphNodeRoot
+  meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  provider.hypercloud (close) - *terraform.graphNodeCloseProvider
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.TransitiveReductionTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeAbstractResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  hypercloud_compute.compute-001 - *terraform.NodeAbstractResource
+provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud (close) - *terraform.graphNodeCloseProvider
+  hypercloud_compute.compute-001 - *terraform.NodeAbstractResource
+root - terraform.graphNodeRoot
+  meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  provider.hypercloud (close) - *terraform.graphNodeCloseProvider
+2017/05/16 18:39:54 [DEBUG] Starting graph walk: walkInput
+2017/05/16 18:39:54 [DEBUG] dag/walk: added new vertex: "meta.count-boundary (count boundary fixup)"
+2017/05/16 18:39:54 [DEBUG] dag/walk: added new vertex: "provider.hypercloud (close)"
+2017/05/16 18:39:54 [DEBUG] dag/walk: added new vertex: "root"
+2017/05/16 18:39:54 [DEBUG] dag/walk: added new vertex: "hypercloud_compute.compute-001"
+2017/05/16 18:39:54 [DEBUG] dag/walk: added new vertex: "provider.hypercloud"
+2017/05/16 18:39:54 [DEBUG] dag/walk: added edge: "root" waiting on "meta.count-boundary (count boundary fixup)"
+2017/05/16 18:39:54 [DEBUG] dag/walk: added edge: "root" waiting on "provider.hypercloud (close)"
+2017/05/16 18:39:54 [DEBUG] dag/walk: added edge: "hypercloud_compute.compute-001" waiting on "provider.hypercloud"
+2017/05/16 18:39:54 [DEBUG] dag/walk: added edge: "meta.count-boundary (count boundary fixup)" waiting on "hypercloud_compute.compute-001"
+2017/05/16 18:39:54 [DEBUG] dag/walk: added edge: "provider.hypercloud (close)" waiting on "hypercloud_compute.compute-001"
+2017/05/16 18:39:54 [DEBUG] dag/walk: dependencies changed for "root", sending new deps
+2017/05/16 18:39:54 [DEBUG] dag/walk: dependencies changed for "hypercloud_compute.compute-001", sending new deps
+2017/05/16 18:39:54 [DEBUG] dag/walk: dependencies changed for "meta.count-boundary (count boundary fixup)", sending new deps
+2017/05/16 18:39:54 [DEBUG] dag/walk: dependencies changed for "provider.hypercloud (close)", sending new deps
+2017/05/16 18:39:54 [DEBUG] dag/walk: walking "provider.hypercloud"
+2017/05/16 18:39:54 [DEBUG] vertex 'root.provider.hypercloud': walking
+2017/05/16 18:39:54 [DEBUG] vertex 'root.provider.hypercloud': evaluating
+2017/05/16 18:39:54 [TRACE] [walkInput] Entering eval tree: provider.hypercloud
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalSequence
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalInitProvider
+2017/05/16 18:39:54 [DEBUG] plugin: starting plugin: /Users/imohammed/GoglandProjects/Terraform/terraform-provider-hypercloud []string{"/Users/imohammed/GoglandProjects/Terraform/terraform-provider-hypercloud"}
+2017/05/16 18:39:54 [DEBUG] plugin: waiting for RPC address for: /Users/imohammed/GoglandProjects/Terraform/terraform-provider-hypercloud
+2017/05/16 18:39:54 [DEBUG] plugin: terraform-provider-hypercloud: 2017/05/16 18:39:54 [DEBUG] plugin: plugin address: unix /var/folders/rh/7kwxt7w57sb1s520lwhrgl3w0000gn/T/plugin826909421
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalOpFilter
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalSequence
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalGetProvider
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalInterpolate
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalBuildProviderConfig
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalInputProvider
+2017/05/16 18:39:54 [DEBUG] root: eval: terraform.EvalNoop
+2017/05/16 18:39:54 [DEBUG] root: eval: terraform.EvalNoop
+2017/05/16 18:39:54 [DEBUG] root: eval: terraform.EvalNoop
+2017/05/16 18:39:54 [TRACE] [walkInput] Exiting eval tree: provider.hypercloud
+2017/05/16 18:39:54 [DEBUG] dag/walk: walking "hypercloud_compute.compute-001"
+2017/05/16 18:39:54 [DEBUG] vertex 'root.hypercloud_compute.compute-001': walking
+2017/05/16 18:39:54 [DEBUG] dag/walk: walking "provider.hypercloud (close)"
+2017/05/16 18:39:54 [DEBUG] vertex 'root.provider.hypercloud (close)': walking
+2017/05/16 18:39:54 [DEBUG] dag/walk: walking "meta.count-boundary (count boundary fixup)"
+2017/05/16 18:39:54 [DEBUG] vertex 'root.meta.count-boundary (count boundary fixup)': walking
+2017/05/16 18:39:54 [DEBUG] vertex 'root.provider.hypercloud (close)': evaluating
+2017/05/16 18:39:54 [TRACE] [walkInput] Entering eval tree: provider.hypercloud (close)
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalCloseProvider
+2017/05/16 18:39:54 [TRACE] [walkInput] Exiting eval tree: provider.hypercloud (close)
+2017/05/16 18:39:54 [DEBUG] vertex 'root.meta.count-boundary (count boundary fixup)': evaluating
+2017/05/16 18:39:54 [TRACE] [walkInput] Entering eval tree: meta.count-boundary (count boundary fixup)
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalCountFixZeroOneBoundaryGlobal
+2017/05/16 18:39:54 [TRACE] [walkInput] Exiting eval tree: meta.count-boundary (count boundary fixup)
+2017/05/16 18:39:54 [DEBUG] dag/walk: walking "root"
+2017/05/16 18:39:54 [DEBUG] vertex 'root.root': walking
+2017/05/16 18:39:54 [INFO] terraform: building graph: GraphTypeValidate
+2017/05/16 18:39:54 [TRACE] ConfigTransformer: Starting for path: []
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.ConfigTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeValidatableResource
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.OutputTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeValidatableResource
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.OrphanResourceTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeValidatableResource
+2017/05/16 18:39:54 [TRACE] AttachResourceConfigTransformer: Beginning...
+2017/05/16 18:39:54 [TRACE] AttachResourceConfigTransformer: Attach resource config request: hypercloud_compute.compute-001
+2017/05/16 18:39:54 [TRACE] Attaching resource config: &config.Resource{Mode:0, Name:"compute-001", Type:"hypercloud_compute", RawCount:(*config.RawConfig)(0xc4202bd200), RawConfig:(*config.RawConfig)(0xc4202bd080), Provisioners:[]*config.Provisioner(nil), Provider:"", DependsOn:[]string(nil), Lifecycle:config.ResourceLifecycle{CreateBeforeDestroy:false, PreventDestroy:false, IgnoreChanges:[]string(nil)}}
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.AttachResourceConfigTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeValidatableResource
+2017/05/16 18:39:54 [DEBUG] Resource state not found for "hypercloud_compute.compute-001": hypercloud_compute.compute-001
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.AttachStateTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeValidatableResource
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.RootVariableTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeValidatableResource
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.MissingProviderTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeValidatableResource
+provider.hypercloud - *terraform.NodeApplyableProvider
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.ProviderTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeValidatableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud - *terraform.NodeApplyableProvider
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.DisableProviderTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeValidatableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud - *terraform.NodeApplyableProvider
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.ParentProviderTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeValidatableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud - *terraform.NodeApplyableProvider
+2017/05/16 18:39:54 [TRACE] Attach provider request: []string{} hypercloud
+2017/05/16 18:39:54 [TRACE] Attaching provider config: *config.ProviderConfig{Name:"hypercloud", Alias:"", RawConfig:(*config.RawConfig)(0xc4202bcd20)}
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.AttachProviderConfigTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeValidatableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud - *terraform.NodeApplyableProvider
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.graphTransformerMulti:
+
+hypercloud_compute.compute-001 - *terraform.NodeValidatableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud - *terraform.NodeApplyableProvider
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.ModuleVariableTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeValidatableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud - *terraform.NodeApplyableProvider
+2017/05/16 18:39:54 [DEBUG] ReferenceTransformer: "hypercloud_compute.compute-001" references: []
+2017/05/16 18:39:54 [DEBUG] ReferenceTransformer: "provider.hypercloud" references: []
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.ReferenceTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeValidatableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud - *terraform.NodeApplyableProvider
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.CountBoundaryTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeValidatableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  hypercloud_compute.compute-001 - *terraform.NodeValidatableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud - *terraform.NodeApplyableProvider
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeValidatableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  hypercloud_compute.compute-001 - *terraform.NodeValidatableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud - *terraform.NodeApplyableProvider
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.CloseProviderTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeValidatableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  hypercloud_compute.compute-001 - *terraform.NodeValidatableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud (close) - *terraform.graphNodeCloseProvider
+  hypercloud_compute.compute-001 - *terraform.NodeValidatableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.CloseProvisionerTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeValidatableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  hypercloud_compute.compute-001 - *terraform.NodeValidatableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud (close) - *terraform.graphNodeCloseProvider
+  hypercloud_compute.compute-001 - *terraform.NodeValidatableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.RootTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeValidatableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  hypercloud_compute.compute-001 - *terraform.NodeValidatableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud (close) - *terraform.graphNodeCloseProvider
+  hypercloud_compute.compute-001 - *terraform.NodeValidatableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+root - terraform.graphNodeRoot
+  meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  provider.hypercloud (close) - *terraform.graphNodeCloseProvider
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.TransitiveReductionTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeValidatableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  hypercloud_compute.compute-001 - *terraform.NodeValidatableResource
+provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud (close) - *terraform.graphNodeCloseProvider
+  hypercloud_compute.compute-001 - *terraform.NodeValidatableResource
+root - terraform.graphNodeRoot
+  meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  provider.hypercloud (close) - *terraform.graphNodeCloseProvider
+2017/05/16 18:39:54 [DEBUG] Starting graph walk: walkValidate
+2017/05/16 18:39:54 [DEBUG] dag/walk: added new vertex: "root"
+2017/05/16 18:39:54 [DEBUG] dag/walk: added new vertex: "hypercloud_compute.compute-001"
+2017/05/16 18:39:54 [DEBUG] dag/walk: added new vertex: "provider.hypercloud"
+2017/05/16 18:39:54 [DEBUG] dag/walk: added new vertex: "meta.count-boundary (count boundary fixup)"
+2017/05/16 18:39:54 [DEBUG] dag/walk: added new vertex: "provider.hypercloud (close)"
+2017/05/16 18:39:54 [DEBUG] dag/walk: added edge: "hypercloud_compute.compute-001" waiting on "provider.hypercloud"
+2017/05/16 18:39:54 [DEBUG] dag/walk: added edge: "meta.count-boundary (count boundary fixup)" waiting on "hypercloud_compute.compute-001"
+2017/05/16 18:39:54 [DEBUG] dag/walk: added edge: "provider.hypercloud (close)" waiting on "hypercloud_compute.compute-001"
+2017/05/16 18:39:54 [DEBUG] dag/walk: added edge: "root" waiting on "meta.count-boundary (count boundary fixup)"
+2017/05/16 18:39:54 [DEBUG] dag/walk: added edge: "root" waiting on "provider.hypercloud (close)"
+2017/05/16 18:39:54 [DEBUG] dag/walk: dependencies changed for "hypercloud_compute.compute-001", sending new deps
+2017/05/16 18:39:54 [DEBUG] dag/walk: dependencies changed for "meta.count-boundary (count boundary fixup)", sending new deps
+2017/05/16 18:39:54 [DEBUG] dag/walk: dependencies changed for "provider.hypercloud (close)", sending new deps
+2017/05/16 18:39:54 [DEBUG] dag/walk: dependencies changed for "root", sending new deps
+2017/05/16 18:39:54 [DEBUG] dag/walk: walking "provider.hypercloud"
+2017/05/16 18:39:54 [DEBUG] vertex 'root.provider.hypercloud': walking
+2017/05/16 18:39:54 [DEBUG] vertex 'root.provider.hypercloud': evaluating
+2017/05/16 18:39:54 [TRACE] [walkValidate] Entering eval tree: provider.hypercloud
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalSequence
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalInitProvider
+2017/05/16 18:39:54 [DEBUG] root: eval: terraform.EvalNoop
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalOpFilter
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalSequence
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalGetProvider
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalInterpolate
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalBuildProviderConfig
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalValidateProvider
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalSetProviderConfig
+2017/05/16 18:39:54 [DEBUG] root: eval: terraform.EvalNoop
+2017/05/16 18:39:54 [DEBUG] root: eval: terraform.EvalNoop
+2017/05/16 18:39:54 [TRACE] [walkValidate] Exiting eval tree: provider.hypercloud
+2017/05/16 18:39:54 [DEBUG] dag/walk: walking "hypercloud_compute.compute-001"
+2017/05/16 18:39:54 [DEBUG] vertex 'root.hypercloud_compute.compute-001': walking
+2017/05/16 18:39:54 [DEBUG] vertex 'root.hypercloud_compute.compute-001': evaluating
+2017/05/16 18:39:54 [TRACE] [walkValidate] Entering eval tree: hypercloud_compute.compute-001
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalSequence
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalInterpolate
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalIf
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalValidateCount
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalCountFixZeroOneBoundary
+2017/05/16 18:39:54 [TRACE] [walkValidate] Exiting eval tree: hypercloud_compute.compute-001
+2017/05/16 18:39:54 [DEBUG] vertex 'root.hypercloud_compute.compute-001': expanding/walking dynamic subgraph
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.ResourceCountTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeValidatableResourceInstance
+2017/05/16 18:39:54 [DEBUG] Resource state not found for "hypercloud_compute.compute-001": hypercloud_compute.compute-001
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.AttachStateTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeValidatableResourceInstance
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeValidatableResourceInstance
+2017/05/16 18:39:54 [DEBUG] ReferenceTransformer: "hypercloud_compute.compute-001" references: []
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.ReferenceTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeValidatableResourceInstance
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.RootTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeValidatableResourceInstance
+2017/05/16 18:39:54 [DEBUG] dag/walk: added new vertex: "hypercloud_compute.compute-001"
+2017/05/16 18:39:54 [DEBUG] dag/walk: walking "hypercloud_compute.compute-001"
+2017/05/16 18:39:54 [DEBUG] vertex 'root.hypercloud_compute.compute-001': walking
+2017/05/16 18:39:54 [DEBUG] vertex 'root.hypercloud_compute.compute-001': evaluating
+2017/05/16 18:39:54 [TRACE] [walkValidate] Entering eval tree: hypercloud_compute.compute-001
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalSequence
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalValidateResourceSelfRef
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalGetProvider
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalInterpolate
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalValidateResource
+2017/05/16 18:39:54 [TRACE] [walkValidate] Exiting eval tree: hypercloud_compute.compute-001
+2017/05/16 18:39:54 [DEBUG] dag/walk: walking "meta.count-boundary (count boundary fixup)"
+2017/05/16 18:39:54 [DEBUG] vertex 'root.meta.count-boundary (count boundary fixup)': walking
+2017/05/16 18:39:54 [DEBUG] dag/walk: walking "provider.hypercloud (close)"
+2017/05/16 18:39:54 [DEBUG] vertex 'root.provider.hypercloud (close)': walking
+2017/05/16 18:39:54 [DEBUG] vertex 'root.meta.count-boundary (count boundary fixup)': evaluating
+2017/05/16 18:39:54 [TRACE] [walkValidate] Entering eval tree: meta.count-boundary (count boundary fixup)
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalCountFixZeroOneBoundaryGlobal
+2017/05/16 18:39:54 [TRACE] [walkValidate] Exiting eval tree: meta.count-boundary (count boundary fixup)
+2017/05/16 18:39:54 [DEBUG] vertex 'root.provider.hypercloud (close)': evaluating
+2017/05/16 18:39:54 [TRACE] [walkValidate] Entering eval tree: provider.hypercloud (close)
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalCloseProvider
+2017/05/16 18:39:54 [TRACE] [walkValidate] Exiting eval tree: provider.hypercloud (close)
+2017/05/16 18:39:54 [DEBUG] dag/walk: walking "root"
+2017/05/16 18:39:54 [DEBUG] vertex 'root.root': walking
+2017/05/16 18:39:54 [INFO] backend/local: apply calling Refresh
+2017/05/16 18:39:54 [INFO] terraform: building graph: GraphTypeRefresh
+2017/05/16 18:39:54 [TRACE] StateTransformer: starting
+2017/05/16 18:39:54 [TRACE] StateTransformer: Module: [root]
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.StateTransformer:
+
+2017/05/16 18:39:54 [TRACE] ConfigTransformer: Starting for path: []
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.ConfigTransformer:
+
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.AttachStateTransformer:
+
+2017/05/16 18:39:54 [TRACE] AttachResourceConfigTransformer: Beginning...
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.AttachResourceConfigTransformer:
+
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.RootVariableTransformer:
+
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.MissingProviderTransformer:
+
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.ProviderTransformer:
+
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.DisableProviderTransformer:
+
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.ParentProviderTransformer:
+
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.AttachProviderConfigTransformer:
+
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.OutputTransformer:
+
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.ModuleVariableTransformer:
+
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.ReferenceTransformer:
+
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.CloseProviderTransformer:
+
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.RootTransformer:
+
+root - terraform.graphNodeRoot
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.TransitiveReductionTransformer:
+
+root - terraform.graphNodeRoot
+2017/05/16 18:39:54 [DEBUG] Starting graph walk: walkRefresh
+2017/05/16 18:39:54 [DEBUG] dag/walk: added new vertex: "root"
+2017/05/16 18:39:54 [DEBUG] dag/walk: walking "root"
+2017/05/16 18:39:54 [DEBUG] vertex 'root.root': walking
+2017/05/16 18:39:54 [INFO] backend/local: apply calling Plan
+2017/05/16 18:39:54 [INFO] terraform: building graph: GraphTypePlan
+2017/05/16 18:39:54 [TRACE] ConfigTransformer: Starting for path: []
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.ConfigTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodePlannableResource
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.OutputTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodePlannableResource
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.OrphanResourceTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodePlannableResource
+2017/05/16 18:39:54 [TRACE] AttachResourceConfigTransformer: Beginning...
+2017/05/16 18:39:54 [TRACE] AttachResourceConfigTransformer: Attach resource config request: hypercloud_compute.compute-001
+2017/05/16 18:39:54 [TRACE] Attaching resource config: &config.Resource{Mode:0, Name:"compute-001", Type:"hypercloud_compute", RawCount:(*config.RawConfig)(0xc4202bd200), RawConfig:(*config.RawConfig)(0xc4202bd080), Provisioners:[]*config.Provisioner(nil), Provider:"", DependsOn:[]string(nil), Lifecycle:config.ResourceLifecycle{CreateBeforeDestroy:false, PreventDestroy:false, IgnoreChanges:[]string(nil)}}
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.AttachResourceConfigTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodePlannableResource
+2017/05/16 18:39:54 [DEBUG] Resource state not found for "hypercloud_compute.compute-001": hypercloud_compute.compute-001
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.AttachStateTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodePlannableResource
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.RootVariableTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodePlannableResource
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.MissingProviderTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodePlannableResource
+provider.hypercloud - *terraform.NodeApplyableProvider
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.ProviderTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodePlannableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud - *terraform.NodeApplyableProvider
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.DisableProviderTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodePlannableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud - *terraform.NodeApplyableProvider
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.ParentProviderTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodePlannableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud - *terraform.NodeApplyableProvider
+2017/05/16 18:39:54 [TRACE] Attach provider request: []string{} hypercloud
+2017/05/16 18:39:54 [TRACE] Attaching provider config: *config.ProviderConfig{Name:"hypercloud", Alias:"", RawConfig:(*config.RawConfig)(0xc4202bcd20)}
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.AttachProviderConfigTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodePlannableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud - *terraform.NodeApplyableProvider
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.ModuleVariableTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodePlannableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud - *terraform.NodeApplyableProvider
+2017/05/16 18:39:54 [DEBUG] ReferenceTransformer: "hypercloud_compute.compute-001" references: []
+2017/05/16 18:39:54 [DEBUG] ReferenceTransformer: "provider.hypercloud" references: []
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.ReferenceTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodePlannableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud - *terraform.NodeApplyableProvider
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.CountBoundaryTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodePlannableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  hypercloud_compute.compute-001 - *terraform.NodePlannableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud - *terraform.NodeApplyableProvider
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodePlannableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  hypercloud_compute.compute-001 - *terraform.NodePlannableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud - *terraform.NodeApplyableProvider
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.CloseProviderTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodePlannableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  hypercloud_compute.compute-001 - *terraform.NodePlannableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud (close) - *terraform.graphNodeCloseProvider
+  hypercloud_compute.compute-001 - *terraform.NodePlannableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.CloseProvisionerTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodePlannableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  hypercloud_compute.compute-001 - *terraform.NodePlannableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud (close) - *terraform.graphNodeCloseProvider
+  hypercloud_compute.compute-001 - *terraform.NodePlannableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.RootTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodePlannableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  hypercloud_compute.compute-001 - *terraform.NodePlannableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud (close) - *terraform.graphNodeCloseProvider
+  hypercloud_compute.compute-001 - *terraform.NodePlannableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+root - terraform.graphNodeRoot
+  meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  provider.hypercloud (close) - *terraform.graphNodeCloseProvider
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.TransitiveReductionTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodePlannableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  hypercloud_compute.compute-001 - *terraform.NodePlannableResource
+provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud (close) - *terraform.graphNodeCloseProvider
+  hypercloud_compute.compute-001 - *terraform.NodePlannableResource
+root - terraform.graphNodeRoot
+  meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  provider.hypercloud (close) - *terraform.graphNodeCloseProvider
+2017/05/16 18:39:54 [DEBUG] Starting graph walk: walkPlan
+2017/05/16 18:39:54 [DEBUG] dag/walk: added new vertex: "hypercloud_compute.compute-001"
+2017/05/16 18:39:54 [DEBUG] dag/walk: added new vertex: "provider.hypercloud"
+2017/05/16 18:39:54 [DEBUG] dag/walk: added new vertex: "meta.count-boundary (count boundary fixup)"
+2017/05/16 18:39:54 [DEBUG] dag/walk: added new vertex: "provider.hypercloud (close)"
+2017/05/16 18:39:54 [DEBUG] dag/walk: added new vertex: "root"
+2017/05/16 18:39:54 [DEBUG] dag/walk: added edge: "meta.count-boundary (count boundary fixup)" waiting on "hypercloud_compute.compute-001"
+2017/05/16 18:39:54 [DEBUG] dag/walk: added edge: "provider.hypercloud (close)" waiting on "hypercloud_compute.compute-001"
+2017/05/16 18:39:54 [DEBUG] dag/walk: added edge: "root" waiting on "provider.hypercloud (close)"
+2017/05/16 18:39:54 [DEBUG] dag/walk: added edge: "root" waiting on "meta.count-boundary (count boundary fixup)"
+2017/05/16 18:39:54 [DEBUG] dag/walk: added edge: "hypercloud_compute.compute-001" waiting on "provider.hypercloud"
+2017/05/16 18:39:54 [DEBUG] dag/walk: dependencies changed for "meta.count-boundary (count boundary fixup)", sending new deps
+2017/05/16 18:39:54 [DEBUG] dag/walk: dependencies changed for "provider.hypercloud (close)", sending new deps
+2017/05/16 18:39:54 [DEBUG] dag/walk: dependencies changed for "root", sending new deps
+2017/05/16 18:39:54 [DEBUG] dag/walk: dependencies changed for "hypercloud_compute.compute-001", sending new deps
+2017/05/16 18:39:54 [DEBUG] dag/walk: walking "provider.hypercloud"
+2017/05/16 18:39:54 [DEBUG] vertex 'root.provider.hypercloud': walking
+2017/05/16 18:39:54 [DEBUG] vertex 'root.provider.hypercloud': evaluating
+2017/05/16 18:39:54 [TRACE] [walkPlan] Entering eval tree: provider.hypercloud
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalSequence
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalInitProvider
+2017/05/16 18:39:54 [DEBUG] root: eval: terraform.EvalNoop
+2017/05/16 18:39:54 [DEBUG] root: eval: terraform.EvalNoop
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalOpFilter
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalSequence
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalGetProvider
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalInterpolate
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalBuildProviderConfig
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalSetProviderConfig
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalOpFilter
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalSequence
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalConfigProvider
+2017/05/16 18:39:54 [TRACE] [walkPlan] Exiting eval tree: provider.hypercloud
+2017/05/16 18:39:54 [DEBUG] dag/walk: walking "hypercloud_compute.compute-001"
+2017/05/16 18:39:54 [DEBUG] vertex 'root.hypercloud_compute.compute-001': walking
+2017/05/16 18:39:54 [DEBUG] vertex 'root.hypercloud_compute.compute-001': evaluating
+2017/05/16 18:39:54 [TRACE] [walkPlan] Entering eval tree: hypercloud_compute.compute-001
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalSequence
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalInterpolate
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalCountCheckComputed
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalIf
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalCountFixZeroOneBoundary
+2017/05/16 18:39:54 [TRACE] [walkPlan] Exiting eval tree: hypercloud_compute.compute-001
+2017/05/16 18:39:54 [DEBUG] vertex 'root.hypercloud_compute.compute-001': expanding/walking dynamic subgraph
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.ResourceCountTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodePlannableResourceInstance
+2017/05/16 18:39:54 [TRACE] OrphanResourceCount: Starting...
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.OrphanResourceCountTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodePlannableResourceInstance
+2017/05/16 18:39:54 [DEBUG] Resource state not found for "hypercloud_compute.compute-001": hypercloud_compute.compute-001
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.AttachStateTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodePlannableResourceInstance
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodePlannableResourceInstance
+2017/05/16 18:39:54 [DEBUG] ReferenceTransformer: "hypercloud_compute.compute-001" references: []
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.ReferenceTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodePlannableResourceInstance
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.RootTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodePlannableResourceInstance
+2017/05/16 18:39:54 [DEBUG] dag/walk: added new vertex: "hypercloud_compute.compute-001"
+2017/05/16 18:39:54 [DEBUG] dag/walk: walking "hypercloud_compute.compute-001"
+2017/05/16 18:39:54 [DEBUG] vertex 'root.hypercloud_compute.compute-001': walking
+2017/05/16 18:39:54 [DEBUG] vertex 'root.hypercloud_compute.compute-001': evaluating
+2017/05/16 18:39:54 [TRACE] [walkPlan] Entering eval tree: hypercloud_compute.compute-001
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalSequence
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalInterpolate
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalGetProvider
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalValidateResource
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalReadState
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalDiff
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalCheckPreventDestroy
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalWriteState
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalWriteDiff
+2017/05/16 18:39:54 [TRACE] [walkPlan] Exiting eval tree: hypercloud_compute.compute-001
+2017/05/16 18:39:54 [DEBUG] dag/walk: walking "meta.count-boundary (count boundary fixup)"
+2017/05/16 18:39:54 [DEBUG] vertex 'root.meta.count-boundary (count boundary fixup)': walking
+2017/05/16 18:39:54 [DEBUG] dag/walk: walking "provider.hypercloud (close)"
+2017/05/16 18:39:54 [DEBUG] vertex 'root.provider.hypercloud (close)': walking
+2017/05/16 18:39:54 [DEBUG] vertex 'root.meta.count-boundary (count boundary fixup)': evaluating
+2017/05/16 18:39:54 [TRACE] [walkPlan] Entering eval tree: meta.count-boundary (count boundary fixup)
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalCountFixZeroOneBoundaryGlobal
+2017/05/16 18:39:54 [TRACE] [walkPlan] Exiting eval tree: meta.count-boundary (count boundary fixup)
+2017/05/16 18:39:54 [DEBUG] vertex 'root.provider.hypercloud (close)': evaluating
+2017/05/16 18:39:54 [TRACE] [walkPlan] Entering eval tree: provider.hypercloud (close)
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalCloseProvider
+2017/05/16 18:39:54 [TRACE] [walkPlan] Exiting eval tree: provider.hypercloud (close)
+2017/05/16 18:39:54 [DEBUG] dag/walk: walking "root"
+2017/05/16 18:39:54 [DEBUG] vertex 'root.root': walking
+2017/05/16 18:39:54 [INFO] terraform: building graph: GraphTypeApply
+2017/05/16 18:39:54 [TRACE] DiffTransformer: starting
+2017/05/16 18:39:54 [TRACE] DiffTransformer: Module: CREATE: hypercloud_compute.compute-001
+  Blueprint-ID: "" => "402881905c0e96c2015c0ea31b370019"
+2017/05/16 18:39:54 [TRACE] DiffTransformer: Resource "hypercloud_compute.compute-001": *terraform.InstanceDiff{mu:sync.Mutex{state:0, sema:0x0}, Attributes:map[string]*terraform.ResourceAttrDiff{"Blueprint-ID":*terraform.ResourceAttrDiff{Old:"", New:"402881905c0e96c2015c0ea31b370019", NewComputed:false, NewRemoved:false, NewExtra:interface {}(nil), RequiresNew:false, Sensitive:false, Type:0x0}, "id":*terraform.ResourceAttrDiff{Old:"", New:"", NewComputed:true, NewRemoved:false, NewExtra:interface {}(nil), RequiresNew:true, Sensitive:false, Type:0x2}}, Destroy:false, DestroyDeposed:false, DestroyTainted:false, Meta:map[string]interface {}(nil)}
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.DiffTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeApplyableResource
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.OrphanOutputTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeApplyableResource
+2017/05/16 18:39:54 [TRACE] AttachResourceConfigTransformer: Beginning...
+2017/05/16 18:39:54 [TRACE] AttachResourceConfigTransformer: Attach resource config request: hypercloud_compute.compute-001
+2017/05/16 18:39:54 [TRACE] Attaching resource config: &config.Resource{Mode:0, Name:"compute-001", Type:"hypercloud_compute", RawCount:(*config.RawConfig)(0xc4202bd200), RawConfig:(*config.RawConfig)(0xc4202bd080), Provisioners:[]*config.Provisioner(nil), Provider:"", DependsOn:[]string(nil), Lifecycle:config.ResourceLifecycle{CreateBeforeDestroy:false, PreventDestroy:false, IgnoreChanges:[]string(nil)}}
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.AttachResourceConfigTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeApplyableResource
+2017/05/16 18:39:54 [DEBUG] Resource state not found for "hypercloud_compute.compute-001": hypercloud_compute.compute-001
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.AttachStateTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeApplyableResource
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.MissingProviderTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeApplyableResource
+provider.hypercloud - *terraform.NodeApplyableProvider
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.ProviderTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeApplyableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud - *terraform.NodeApplyableProvider
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.DisableProviderTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeApplyableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud - *terraform.NodeApplyableProvider
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.ParentProviderTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeApplyableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud - *terraform.NodeApplyableProvider
+2017/05/16 18:39:54 [TRACE] Attach provider request: []string{} hypercloud
+2017/05/16 18:39:54 [TRACE] Attaching provider config: *config.ProviderConfig{Name:"hypercloud", Alias:"", RawConfig:(*config.RawConfig)(0xc4202bcd20)}
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.AttachProviderConfigTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeApplyableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud - *terraform.NodeApplyableProvider
+2017/05/16 18:39:54 [TRACE] DestroyEdgeTransformer: Beginning destroy edge transformation...
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.DestroyEdgeTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeApplyableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud - *terraform.NodeApplyableProvider
+2017/05/16 18:39:54 [TRACE] CBDEdgeTransformer: Beginning CBD transformation...
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.CBDEdgeTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeApplyableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud - *terraform.NodeApplyableProvider
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.MissingProvisionerTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeApplyableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud - *terraform.NodeApplyableProvider
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.ProvisionerTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeApplyableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud - *terraform.NodeApplyableProvider
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.RootVariableTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeApplyableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud - *terraform.NodeApplyableProvider
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.OutputTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeApplyableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud - *terraform.NodeApplyableProvider
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.ModuleVariableTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeApplyableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud - *terraform.NodeApplyableProvider
+2017/05/16 18:39:54 [DEBUG] ReferenceTransformer: "hypercloud_compute.compute-001" references: []
+2017/05/16 18:39:54 [DEBUG] ReferenceTransformer: "provider.hypercloud" references: []
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.ReferenceTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeApplyableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud - *terraform.NodeApplyableProvider
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.CountBoundaryTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeApplyableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  hypercloud_compute.compute-001 - *terraform.NodeApplyableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud - *terraform.NodeApplyableProvider
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeApplyableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  hypercloud_compute.compute-001 - *terraform.NodeApplyableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud - *terraform.NodeApplyableProvider
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.CloseProviderTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeApplyableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  hypercloud_compute.compute-001 - *terraform.NodeApplyableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud (close) - *terraform.graphNodeCloseProvider
+  hypercloud_compute.compute-001 - *terraform.NodeApplyableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.CloseProvisionerTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeApplyableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  hypercloud_compute.compute-001 - *terraform.NodeApplyableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud (close) - *terraform.graphNodeCloseProvider
+  hypercloud_compute.compute-001 - *terraform.NodeApplyableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.RootTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeApplyableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  hypercloud_compute.compute-001 - *terraform.NodeApplyableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud (close) - *terraform.graphNodeCloseProvider
+  hypercloud_compute.compute-001 - *terraform.NodeApplyableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+root - terraform.graphNodeRoot
+  meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  provider.hypercloud (close) - *terraform.graphNodeCloseProvider
+2017/05/16 18:39:54 [TRACE] Graph after step *terraform.TransitiveReductionTransformer:
+
+hypercloud_compute.compute-001 - *terraform.NodeApplyableResource
+  provider.hypercloud - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  hypercloud_compute.compute-001 - *terraform.NodeApplyableResource
+provider.hypercloud - *terraform.NodeApplyableProvider
+provider.hypercloud (close) - *terraform.graphNodeCloseProvider
+  hypercloud_compute.compute-001 - *terraform.NodeApplyableResource
+root - terraform.graphNodeRoot
+  meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  provider.hypercloud (close) - *terraform.graphNodeCloseProvider
+2017/05/16 18:39:54 [DEBUG] Starting graph walk: walkApply
+2017/05/16 18:39:54 [DEBUG] dag/walk: added new vertex: "root"
+2017/05/16 18:39:54 [DEBUG] dag/walk: added new vertex: "hypercloud_compute.compute-001"
+2017/05/16 18:39:54 [DEBUG] dag/walk: added new vertex: "provider.hypercloud"
+2017/05/16 18:39:54 [DEBUG] dag/walk: added new vertex: "meta.count-boundary (count boundary fixup)"
+2017/05/16 18:39:54 [DEBUG] dag/walk: added new vertex: "provider.hypercloud (close)"
+2017/05/16 18:39:54 [DEBUG] dag/walk: added edge: "provider.hypercloud (close)" waiting on "hypercloud_compute.compute-001"
+2017/05/16 18:39:54 [DEBUG] dag/walk: added edge: "root" waiting on "meta.count-boundary (count boundary fixup)"
+2017/05/16 18:39:54 [DEBUG] dag/walk: added edge: "root" waiting on "provider.hypercloud (close)"
+2017/05/16 18:39:54 [DEBUG] dag/walk: added edge: "hypercloud_compute.compute-001" waiting on "provider.hypercloud"
+2017/05/16 18:39:54 [DEBUG] dag/walk: added edge: "meta.count-boundary (count boundary fixup)" waiting on "hypercloud_compute.compute-001"
+2017/05/16 18:39:54 [DEBUG] dag/walk: dependencies changed for "hypercloud_compute.compute-001", sending new deps
+2017/05/16 18:39:54 [DEBUG] dag/walk: dependencies changed for "meta.count-boundary (count boundary fixup)", sending new deps
+2017/05/16 18:39:54 [DEBUG] dag/walk: dependencies changed for "provider.hypercloud (close)", sending new deps
+2017/05/16 18:39:54 [DEBUG] dag/walk: dependencies changed for "root", sending new deps
+2017/05/16 18:39:54 [DEBUG] dag/walk: walking "provider.hypercloud"
+2017/05/16 18:39:54 [DEBUG] vertex 'root.provider.hypercloud': walking
+2017/05/16 18:39:54 [DEBUG] vertex 'root.provider.hypercloud': evaluating
+2017/05/16 18:39:54 [TRACE] [walkApply] Entering eval tree: provider.hypercloud
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalSequence
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalInitProvider
+2017/05/16 18:39:54 [DEBUG] root: eval: terraform.EvalNoop
+2017/05/16 18:39:54 [DEBUG] root: eval: terraform.EvalNoop
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalOpFilter
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalSequence
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalGetProvider
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalInterpolate
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalBuildProviderConfig
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalSetProviderConfig
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalOpFilter
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalSequence
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalConfigProvider
+2017/05/16 18:39:54 [TRACE] [walkApply] Exiting eval tree: provider.hypercloud
+2017/05/16 18:39:54 [DEBUG] dag/walk: walking "hypercloud_compute.compute-001"
+2017/05/16 18:39:54 [DEBUG] vertex 'root.hypercloud_compute.compute-001': walking
+2017/05/16 18:39:54 [DEBUG] vertex 'root.hypercloud_compute.compute-001': evaluating
+2017/05/16 18:39:54 [TRACE] [walkApply] Entering eval tree: hypercloud_compute.compute-001
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalSequence
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalInstanceInfo
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalReadDiff
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalIf
+2017/05/16 18:39:54 [DEBUG] root: eval: terraform.EvalNoop
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalIf
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalInterpolate
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalGetProvider
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalReadState
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalValidateResource
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalDiff
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalReadDiff
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalCompareDiff
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalGetProvider
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalReadState
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalApplyPre
+2017/05/16 18:39:54 [DEBUG] root: eval: *terraform.EvalApply
+2017/05/16 18:39:54 [DEBUG] apply: hypercloud_compute.compute-001: executing Apply
+2017/05/16 18:39:54 [DEBUG] plugin: terraform-provider-hypercloud: 2017/05/16 18:39:54 [DEBUG] No meta timeoutkey found in Apply()
+2017/05/16 18:39:54 [DEBUG] plugin: terraform-provider-hypercloud: 2017/05/16 18:39:54 [HC-INFO] Blueprint ID: 402881905c0e96c2015c0ea31b370019
+2017/05/16 18:39:54 [DEBUG] plugin: terraform-provider-hypercloud: 2017/05/16 18:39:54 [HC-INFO] Creating Compute from Blueprint 402881905c0e96c2015c0ea31b370019...
+2017/05/16 18:39:59 [DEBUG] dag/walk: vertex "root", waiting for: "meta.count-boundary (count boundary fixup)"
+2017/05/16 18:39:59 [DEBUG] dag/walk: vertex "meta.count-boundary (count boundary fixup)", waiting for: "hypercloud_compute.compute-001"
+2017/05/16 18:39:59 [DEBUG] dag/walk: vertex "provider.hypercloud (close)", waiting for: "hypercloud_compute.compute-001"
+2017/05/16 18:40:01 [DEBUG] plugin: terraform-provider-hypercloud: panic: json: cannot unmarshal number into Go struct field HCBlueprint.created of type string
+2017/05/16 18:40:01 [DEBUG] plugin: terraform-provider-hypercloud: 
+2017/05/16 18:40:01 [DEBUG] plugin: terraform-provider-hypercloud: goroutine 70 [running]:
+2017/05/16 18:40:01 [DEBUG] plugin: terraform-provider-hypercloud: main.Auth.create(0xc4202dd760, 0x1a, 0xc4202e2dd0, 0xd, 0xc4202e2d78, 0x8, 0xc4202fa1a0, 0x20, 0x0)
+2017/05/16 18:40:01 [DEBUG] plugin: terraform-provider-hypercloud: 	/Users/imohammed/GoglandProjects/Terraform/api_client.go:133 +0x908
+2017/05/16 18:40:01 [DEBUG] plugin: terraform-provider-hypercloud: main.resourceComputeCreate(0xc4202e4d90, 0x164f920, 0xc4202f08d0, 0x0, 0x0)
+2017/05/16 18:40:01 [DEBUG] plugin: terraform-provider-hypercloud: 	/Users/imohammed/GoglandProjects/Terraform/resource_compute.go:51 +0x161
+2017/05/16 18:40:01 [DEBUG] plugin: terraform-provider-hypercloud: github.com/hashicorp/terraform/helper/schema.(*Resource).Apply(0xc4202141e0, 0xc420016a00, 0xc4202fa180, 0x164f920, 0xc4202f08d0, 0x1, 0x28, 0xc4202f0fc0)
+2017/05/16 18:40:01 [DEBUG] plugin: terraform-provider-hypercloud: 	/Users/imohammed/go/src/github.com/hashicorp/terraform/helper/schema/resource.go:186 +0x48d
+2017/05/16 18:40:01 [DEBUG] plugin: terraform-provider-hypercloud: github.com/hashicorp/terraform/helper/schema.(*Provider).Apply(0xc420218070, 0xc4200169b0, 0xc420016a00, 0xc4202fa180, 0x1b72000, 0x0, 0x0)
+2017/05/16 18:40:01 [DEBUG] plugin: terraform-provider-hypercloud: 	/Users/imohammed/go/src/github.com/hashicorp/terraform/helper/schema/provider.go:242 +0x9b
+2017/05/16 18:40:01 [DEBUG] plugin: terraform-provider-hypercloud: github.com/hashicorp/terraform/plugin.(*ResourceProviderServer).Apply(0xc4201d4080, 0xc4202ddbe0, 0xc4202e3950, 0x0, 0x0)
+2017/05/16 18:40:01 [DEBUG] plugin: terraform-provider-hypercloud: 	/Users/imohammed/go/src/github.com/hashicorp/terraform/plugin/resource_provider.go:488 +0x57
+2017/05/16 18:40:01 [DEBUG] plugin: terraform-provider-hypercloud: reflect.Value.call(0xc42001cf00, 0xc42000ea90, 0x13, 0x16a9ff2, 0x4, 0xc420264f20, 0x3, 0x3, 0x0, 0x0, ...)
+2017/05/16 18:40:01 [DEBUG] plugin: terraform-provider-hypercloud: 	/usr/local/go/src/reflect/value.go:434 +0x91f
+2017/05/16 18:40:01 [DEBUG] plugin: terraform-provider-hypercloud: reflect.Value.Call(0xc42001cf00, 0xc42000ea90, 0x13, 0xc42028bf20, 0x3, 0x3, 0x0, 0x0, 0x0)
+2017/05/16 18:40:01 [DEBUG] plugin: terraform-provider-hypercloud: 	/usr/local/go/src/reflect/value.go:302 +0xa4
+2017/05/16 18:40:01 [DEBUG] plugin: terraform-provider-hypercloud: net/rpc.(*service).call(0xc4202df700, 0xc4202df6c0, 0xc4202e2910, 0xc4202d6580, 0xc4202dd780, 0x15a07e0, 0xc4202ddbe0, 0x16, 0x15a0820, 0xc4202e3950, ...)
+2017/05/16 18:40:01 [DEBUG] plugin: terraform-provider-hypercloud: 	/usr/local/go/src/net/rpc/server.go:387 +0x144
+2017/05/16 18:40:01 [DEBUG] plugin: terraform-provider-hypercloud: created by net/rpc.(*Server).ServeCodec
+2017/05/16 18:40:01 [DEBUG] plugin: terraform-provider-hypercloud: 	/usr/local/go/src/net/rpc/server.go:481 +0x404
+2017/05/16 18:40:01 [DEBUG] root: eval: *terraform.EvalWriteState
+2017/05/16 18:40:01 [DEBUG] root: eval: *terraform.EvalApplyProvisioners
+2017/05/16 18:40:01 [DEBUG] root: eval: *terraform.EvalIf
+2017/05/16 18:40:01 [DEBUG] root: eval: *terraform.EvalWriteState
+2017/05/16 18:40:01 [DEBUG] root: eval: *terraform.EvalWriteDiff
+2017/05/16 18:40:01 [DEBUG] root: eval: *terraform.EvalApplyPost
+2017/05/16 18:40:01 [ERROR] root: eval: *terraform.EvalApplyPost, err: 1 error(s) occurred:
+
+* hypercloud_compute.compute-001: unexpected EOF
+2017/05/16 18:40:01 [ERROR] root: eval: *terraform.EvalSequence, err: 1 error(s) occurred:
+
+* hypercloud_compute.compute-001: unexpected EOF
+2017/05/16 18:40:01 [TRACE] [walkApply] Exiting eval tree: hypercloud_compute.compute-001
+2017/05/16 18:40:01 [DEBUG] dag/walk: upstream errored, not walking "meta.count-boundary (count boundary fixup)"
+2017/05/16 18:40:01 [DEBUG] dag/walk: upstream errored, not walking "provider.hypercloud (close)"
+2017/05/16 18:40:01 [DEBUG] dag/walk: upstream errored, not walking "root"
+2017/05/16 18:40:01 [DEBUG] plugin: /Users/imohammed/GoglandProjects/Terraform/terraform-provider-hypercloud: plugin process exited
+2017/05/16 18:40:01 [TRACE] Preserving existing state lineage "a03f75c1-4cf4-4885-aafb-ba9a1a8cb553"
+2017/05/16 18:40:01 [TRACE] Preserving existing state lineage "a03f75c1-4cf4-4885-aafb-ba9a1a8cb553"
+2017/05/16 18:40:01 [DEBUG] plugin: waiting for all plugin processes to complete...
+2017/05/16 18:40:01 [WARN] plugin: error closing client during Kill: connection is shut down
